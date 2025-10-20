@@ -1,0 +1,261 @@
+/* ===============================
+   Global Styles
+=============================== */
+body {
+  background-color: #f4f6f9;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ===============================
+   Container
+=============================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===============================
+   Header
+=============================== */
+.header {
+  background-color: #003366;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.header button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header button:hover {
+  background-color: #c0392b;
+}
+
+/* ===============================
+   Cards
+=============================== */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Section Headings
+=============================== */
+.card h5 {
+  border-bottom: 2px solid #003366;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #003366;
+}
+
+/* ===============================
+   Tables
+=============================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #003366;
+  color: white;
+  font-weight: 500;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f8f9fc;
+}
+
+.table-bordered td {
+  vertical-align: middle;
+}
+
+/* ===============================
+   Buttons
+=============================== */
+.btn {
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* ===============================
+   Badges
+=============================== */
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* ===============================
+   Forms
+=============================== */
+form input,
+form select,
+form textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #003366;
+  box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.1);
+}
+
+form .btn {
+  font-weight: 600;
+}
+
+/* ===============================
+   Modal
+=============================== */
+.modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: #003366;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+/* ===============================
+   Alerts
+=============================== */
+.alert {
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  form .row {
+    flex-direction: column;
+  }
+
+  form .col-md-2,
+  form .col-md-3 {
+    width: 100%;
+  }
+}
