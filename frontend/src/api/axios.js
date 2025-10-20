@@ -1,9 +1,12 @@
 // src/api/axios.js
 import axios from "axios";
 
+// Use environment variable for backend URL
 const API = axios.create({
-  baseURL: "https://department-management-system-cse-sahrdaya.onrender.com/api", // your Render backend URL
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
 });
+
+// Attach token if user is logged in
 API.interceptors.request.use((req) => {
   const user = localStorage.getItem("user");
   if (user) req.headers.Authorization = `Bearer ${JSON.parse(user).token}`;
