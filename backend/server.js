@@ -38,10 +38,18 @@ app.use("/api/leaves", leaveRoutes);
 
 // Serve React frontend in production
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/dist"))); // Vite outputs to 'dist'
+  // Adjust path depending on your frontend build folder
+  app.use(express.static(path.join(__dirname, "../frontend/dist"))); // Vite output
+  // For CRA, use: "../frontend/build"
 
+  // Catch-all route to serve index.html
   app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+  });
+} else {
+  // Optional: redirect root to API in development
+  app.get("/", (req, res) => {
+    res.redirect("/api");
   });
 }
 
