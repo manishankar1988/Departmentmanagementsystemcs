@@ -30,6 +30,10 @@ const __dirname = path.dirname(__filename);
 app.get("/api", (req, res) => {
   res.send("✅ Department Management API is running...");
 });
+app.use(cors({
+  origin: "https://front-end-department-management-system-cs.onrender.com",
+  credentials: true
+}));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/staff", staffRoutes);
